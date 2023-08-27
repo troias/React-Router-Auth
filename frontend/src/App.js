@@ -17,6 +17,8 @@ import AuthenticationPage, {
   action as AuthAction,
 } from "./pages/Authentication";
 
+import { action as logoutAction } from "./pages/Logout";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
         path: "/auth",
         element: <AuthenticationPage />,
         action: AuthAction,
+      },
+      {
+        path: "/logout",
+        action: logoutAction,
       },
       {
         path: "events",
